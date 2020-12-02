@@ -1,0 +1,13 @@
+.container {
+    border: 3px solid black;
+}
+
+p {
+    display: inline-block;
+    margin-left: 320px;
+}
+
+.primero,
+.segundo {
+    border-bottom: 3px solid black;
+}

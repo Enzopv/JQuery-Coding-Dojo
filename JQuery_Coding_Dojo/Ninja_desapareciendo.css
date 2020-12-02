@@ -1,0 +1,13 @@
+.container {
+    border: 3px solid black;
+    padding: 30px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.btn {
+    margin-top: 20px;
+}

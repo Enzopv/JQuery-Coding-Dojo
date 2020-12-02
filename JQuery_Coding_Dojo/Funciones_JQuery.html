@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Funciones de JQuery</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Funciones_JQuery.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            alert("Estás usando JQuery");
+            $('.primero button').click(function() {
+                $('.primero h1').hide(500);
+                $('.primero h1').show(500);
+                $('.primero p').toggle(500);
+            });
+            $('.segundo button').click(function() {
+                $('.segundo h1').fadeOut(3000);
+                $('.segundo h1').fadeIn(3000);
+                $('.segundo p').addClass('text-danger');
+            });
+            $('.tercero button').click(function() {
+                $('.tercero h1').slideToggle(3000);
+                $('.tercero p').slideUp(2000);
+                $('.tercero p').slideDown(2000);
+                $('.segundo p').append('Estás aprendiendo JQuery');
+                $('.segundo p').prepend('En Coding Dojo');
+                $('#miBoton').after('HOLA MUNDO');
+                $('#miBoton').before('HOLA MUNDO');
+            });
+            $('#campo').val("PROBANDO JQUERY");
+            $('#miBoton').click(function() {
+                alert($('#campo').val());
+            });
+            $('button').click(function() {
+                $('input').attr('type', 'codigo');
+            });
+            $('h3').text("FIN DE LA PRÁCTICA");
+            $('h4').html("REANUDAMOS LA PRÁCTICA");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <article class="primero">
+            <h1 class="text-center">¡Hola Mundo!</h1>
+            <button type="button" class="btn btn-warning">Slidetoogle</button>
+            <p>Click the button to the slidetoogle a hidden image</p>
+        </article><br>
+        <article class="segundo">
+            <h1 class="text-center">¡Hola Mundo!</h1>
+            <button type="button" class="btn btn-danger">Add Class</button>
+            <p>Click the button to add "red" to this paragraph</p>
+        </article><br>
+        <article class="tercero">
+            <h1 class="text-center">¡Hola Mundo!</h1>
+            <button type="button" class="btn btn-success">Append</button>
+            <p>Click the buttom to append a new paragraph!holaholahola</p>
+        </article><br>
+        <div>
+            <input type="text" id="campo">
+            <button id="miBoton">USAR VAL</button>
+        </div>
+        <div>
+            <h3 class="text-center">BUENA PRÁCTICA</h3>
+            <h4 class="text-center">JQUERY</h4>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.jscopy" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
